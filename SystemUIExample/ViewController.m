@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "SHIAlertView.h"
+#import "SHIPresentBottomVC.h"
+
 @interface ViewController (){
     UIWindow *_window;
 }
@@ -31,6 +33,12 @@
 
 - (void)buttonAction:(UIButton *)button{
     
+//    SHIPresentBottomVC *vc = [[SHIPresentBottomVC alloc] init];
+//      vc.modalPresentationStyle = UIModalPresentationCustom ;
+//    [self presentViewController:vc animated:YES completion:^{
+//        
+//    }];
+//    return;
 //    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"titl" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
 //    UIAlertAction *action = [UIAlertAction actionWithTitle:@"默认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 //        

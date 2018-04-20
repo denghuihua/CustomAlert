@@ -7,36 +7,6 @@
 //
 #import "SHIAlertView.h"
 
-typedef  void (^AlertSelectedHander)(SHIAlertAction * _Nonnull action) ;
-@interface SHIAlertAction(){
-    
-}
-@property(nonatomic,assign)AlertSelectedHander alertActionHander;
-@end
-
-@implementation SHIAlertAction
- 
-+ (instancetype _Nullable )actionWithTitle:(nullable NSString *)title style:(SHIAlertActionStyle)style handler:(void (^ __nullable)(SHIAlertAction * _Nonnull action))handler{
-    SHIAlertAction *action = [[SHIAlertAction alloc]initWithTitle:title style:style handler:handler];
-    return action;
-}
-
-- (instancetype _Nullable )initWithTitle:(nullable NSString *)title style:(SHIAlertActionStyle)style handler:(void (^ __nullable)(SHIAlertAction * _Nonnull action))handler{
-    if (self = [super init]) {
-        _title = title;
-        _style = style;
-        _alertActionHander = handler;
-    }
-    return self;
-}
-
-- (nonnull id)copyWithZone:(nullable NSZone *)zone { 
-    SHIAlertAction *newAction = [[SHIAlertAction allocWithZone:zone]initWithTitle:_title style:_style handler:_alertActionHander];
-    return newAction;
-}
-
-@end
-
 #import "UIColor+Hex.h"
 #import "SHISelectedColorButton.h"
 #import "NSString+TextHeight.h"
@@ -88,7 +58,6 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
         {
             [self createActionSheetUI];
         }
-        self.windowLevel = UIWindowLevelAlert;
     }
     return self;
 }
@@ -243,8 +212,8 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
     }else if(action.style == SHIAlertActionStyleDestructive) 
     {
        btn.tag = destructive_button_tag;
-        [btn setTitleColor:[UIColor colorWithHex:0x5ECF75] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor colorWithHex:0x5ECF75] forState:UIControlStateHighlighted];
+        [btn setTitleColor:[UIColor colorWithHex:0xEE2F10] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor colorWithHex:0xEE2F10] forState:UIControlStateHighlighted];
     }else
     {
         btn.tag = cancel_button_tag;
@@ -439,7 +408,13 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
         return;
     }
 //    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-    [self makeKeyAndVisible];
+    if (self.parentView) {
+        [self.parentView addSubview:self];
+    }else
+    {
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        [window addSubview:self];
+    }
     
     if (self.preferredStyle == SHIAlertControllerStyleActionSheet) {
         
@@ -541,10 +516,8 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
     SHIAlertAction *selectAlertAction = [self alertActionWithSelectViewTag:viewTag];
     NSLog(@"selectAlertAction:%@",selectAlertAction.title);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self removeFromSuperview];
+        [self removeFromSuperview];
         [self.layer removeAllAnimations];
-        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
-        [self resignKeyWindow];
         if (selectAlertAction.alertActionHander) {
             selectAlertAction.alertActionHander(selectAlertAction);
         }
@@ -559,7 +532,7 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
         self.bgBtn.frame = CGRectMake(0, 0, self.frame.size.width,self.frame.size.height);
         self.bgBtn.alpha = 0.0;
     } completion:^(BOOL finished) {
-        [self resignKeyWindow];
+        [self removeFromSuperview];
         [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];    
         self.hidden = YES;
         if (selectAlertAction.alertActionHander) {

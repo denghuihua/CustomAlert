@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A466CC52089CA7A008F5374 /* SHIAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A466CC42089CA7A008F5374 /* SHIAlertAction.m */; };
+		4A466CC82089D178008F5374 /* SHIAlertPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A466CC72089D178008F5374 /* SHIAlertPresentationController.m */; };
+		4A466CCB2089D988008F5374 /* SHIPresentBottomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A466CCA2089D988008F5374 /* SHIPresentBottomVC.m */; };
 		4A805FCE2084776F00214A76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A805FCD2084776F00214A76 /* AppDelegate.m */; };
 		4A805FD12084776F00214A76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A805FD02084776F00214A76 /* ViewController.m */; };
 		4A805FD42084776F00214A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A805FD22084776F00214A76 /* Main.storyboard */; };
@@ -41,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A466CC32089CA7A008F5374 /* SHIAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHIAlertAction.h; sourceTree = "<group>"; };
+		4A466CC42089CA7A008F5374 /* SHIAlertAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHIAlertAction.m; sourceTree = "<group>"; };
+		4A466CC62089D178008F5374 /* SHIAlertPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHIAlertPresentationController.h; sourceTree = "<group>"; };
+		4A466CC72089D178008F5374 /* SHIAlertPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHIAlertPresentationController.m; sourceTree = "<group>"; };
+		4A466CC92089D988008F5374 /* SHIPresentBottomVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHIPresentBottomVC.h; sourceTree = "<group>"; };
+		4A466CCA2089D988008F5374 /* SHIPresentBottomVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHIPresentBottomVC.m; sourceTree = "<group>"; };
 		4A805FC92084776F00214A76 /* SystemUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A805FCC2084776F00214A76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A805FCD2084776F00214A76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +158,12 @@
 				4A80603E2084985B00214A76 /* SHIAlertView.m */,
 				4A8060462084A3C400214A76 /* NSString+TextHeight.h */,
 				4A8060472084A3C400214A76 /* NSString+TextHeight.m */,
+				4A466CC32089CA7A008F5374 /* SHIAlertAction.h */,
+				4A466CC42089CA7A008F5374 /* SHIAlertAction.m */,
+				4A466CC62089D178008F5374 /* SHIAlertPresentationController.h */,
+				4A466CC72089D178008F5374 /* SHIAlertPresentationController.m */,
+				4A466CC92089D988008F5374 /* SHIPresentBottomVC.h */,
+				4A466CCA2089D988008F5374 /* SHIPresentBottomVC.m */,
 			);
 			path = SystemUIExample;
 			sourceTree = "<group>";
@@ -367,13 +382,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A466CC52089CA7A008F5374 /* SHIAlertAction.m in Sources */,
 				4A8060482084A3C400214A76 /* NSString+TextHeight.m in Sources */,
+				4A466CCB2089D988008F5374 /* SHIPresentBottomVC.m in Sources */,
 				4A80603F2084985B00214A76 /* SHIAlertView.m in Sources */,
 				4A80604220849AC300214A76 /* UIColor+Hex.m in Sources */,
 				4A805FD12084776F00214A76 /* ViewController.m in Sources */,
 				4A805FDC2084776F00214A76 /* main.m in Sources */,
 				4A805FCE2084776F00214A76 /* AppDelegate.m in Sources */,
 				4A80604520849FB600214A76 /* SHISelectedColorButton.m in Sources */,
+				4A466CC82089D178008F5374 /* SHIAlertPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

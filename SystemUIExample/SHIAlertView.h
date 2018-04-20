@@ -9,15 +9,13 @@
 
 /*
  alert 只支持两个按钮
+ 如果
+ alert继承 window,则window需要global变量保存 
+ 
  */
 
 #import <UIKit/UIKit.h>
-
-typedef NS_ENUM(NSInteger, SHIAlertActionStyle) {
-    SHIAlertActionStyleDefault = 0,
-    SHIAlertActionStyleCancel,
-    SHIAlertActionStyleDestructive
-} NS_ENUM_AVAILABLE_IOS(8_0);
+#import "SHIAlertAction.h"
 
 typedef NS_ENUM(NSInteger, SHIAlertControllerStyle) {
     SHIAlertControllerStyleActionSheet = 0,
@@ -25,24 +23,16 @@ typedef NS_ENUM(NSInteger, SHIAlertControllerStyle) {
 } NS_ENUM_AVAILABLE_IOS(8_0);
 
 
-
-NS_CLASS_AVAILABLE_IOS(8_0) @interface SHIAlertAction : NSObject <NSCopying>
-
-+ (instancetype _Nullable )actionWithTitle:(nullable NSString *)title style:(SHIAlertActionStyle)style handler:(void (^ __nullable)(SHIAlertAction * _Nonnull action))handler;
-
-@property (nullable, nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) SHIAlertActionStyle style;
-@property (nonatomic, getter=isEnabled) BOOL enabled;
-
-@end
-
-NS_CLASS_AVAILABLE_IOS(8_0) @interface SHIAlertView : UIWindow
+NS_CLASS_AVAILABLE_IOS(8_0) @interface SHIAlertView : UIView
 
 + (instancetype _Nonnull )alertViewWithTitle:(nullable NSString *)title message:(nullable NSString *)message preferredStyle:(SHIAlertControllerStyle)preferredStyle;
 
 - (void)addAction:(SHIAlertAction *_Nullable)action;
 
 - (void)show;
+
+@property (nonatomic, assign)UIView *parentView;
+
 @property (nonatomic, readonly) NSMutableArray<SHIAlertAction *> * _Nullable actions;
 
 @property (nullable, nonatomic, copy) NSString *title;
