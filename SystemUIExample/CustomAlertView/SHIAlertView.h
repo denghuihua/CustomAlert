@@ -12,6 +12,10 @@
  如果
  alert继承 window,则window需要global变量保存 
  
+ 注意：alert 添加在keywindow上，当项目中有keyWindow切换时，比如广告开屏占用keywindow，这时storylist业务里添加上keyWindow上的弹框将会出现，这是不友好的，需要传入parentView
+ 
+ 更好的实现方式：采用presention动画的方式，demo已突破技术难题，代码需要继续码
+ 
  */
 
 #import <UIKit/UIKit.h>
@@ -31,7 +35,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface SHIAlertView : UIView
 
 - (void)show;
 
-@property (nonatomic, assign)UIView *parentView;
+@property (nonatomic, assign)UIView *_Nullable parentView;
 
 @property (nonatomic, readonly) NSMutableArray<SHIAlertAction *> * _Nullable actions;
 

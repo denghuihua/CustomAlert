@@ -28,6 +28,8 @@
 #define actionSheet_cancel_button_height 51
 #define actionSheet_top_bottom_margin 17
 
+#define actionSheet_bgBtn_tag 60
+
 #define fontHeigh(x) [@"我" boundingRectWithSize:CGSizeMake(2000, 2000) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:x} context:nil].size.height
 
 @interface SHIAlertView()<CAAnimationDelegate>
@@ -68,7 +70,6 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
 }
 
 - (void)layoutSubviews{
-//    [super layoutSubviews];
     if (self.preferredStyle == SHIAlertControllerStyleActionSheet) {
         [self layoutActionSheet];
     }else
@@ -195,7 +196,6 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
             make.left.equalTo(_containerView);
         }];
         self.containerView.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, 300);
-        
     }
 }
 
@@ -228,7 +228,6 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
 #pragma mark - AlertUI
 
 - (void)layoutAlertUI{
-    
     if (self.actions.count == 1) {
         UIButton *defaultBtn = [_containerView viewWithTag:default_button_tag];
         [defaultBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -535,7 +534,7 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
         [self removeFromSuperview];
         [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];    
         self.hidden = YES;
-        if (selectAlertAction.alertActionHander) {
+        if (selectAlertAction && selectAlertAction.alertActionHander) {
             selectAlertAction.alertActionHander(selectAlertAction);
         }
     }];
@@ -619,7 +618,8 @@ preferredStyle:(SHIAlertControllerStyle)preferredStyle{
     if (_bgBtn == nil) {
         _bgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _bgBtn.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.4];
-        [_bgBtn addTarget:self action:@selector(dismissActionSheet) forControlEvents:UIControlEventTouchUpInside];
+        _bgBtn.tag = actionSheet_bgBtn_tag;
+        [_bgBtn addTarget:self action:@selector(dismissActionSheetWithViewTag:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _bgBtn;
 }

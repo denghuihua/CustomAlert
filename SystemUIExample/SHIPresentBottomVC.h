@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SHIPresentBottomVC : UIViewController
+@interface SHIPresentBottomVC : UIViewController<UIViewControllerTransitioningDelegate>
 @property(nonatomic,assign)CGFloat controllerHeight;
 @end

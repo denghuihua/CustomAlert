@@ -115,6 +115,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4A466CCD208A05E9008F5374 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4A8060462084A3C400214A76 /* NSString+TextHeight.h */,
+				4A8060472084A3C400214A76 /* NSString+TextHeight.m */,
+				4A80604320849FB600214A76 /* SHISelectedColorButton.h */,
+				4A80604420849FB600214A76 /* SHISelectedColorButton.m */,
+				4A80603D2084985B00214A76 /* SHIAlertView.h */,
+				4A80603E2084985B00214A76 /* SHIAlertView.m */,
+				4A466CC32089CA7A008F5374 /* SHIAlertAction.h */,
+				4A466CC42089CA7A008F5374 /* SHIAlertAction.m */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
 		4A805FC02084776F00214A76 = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +156,7 @@
 		4A805FCB2084776F00214A76 /* SystemUIExample */ = {
 			isa = PBXGroup;
 			children = (
-				4A80604320849FB600214A76 /* SHISelectedColorButton.h */,
-				4A80604420849FB600214A76 /* SHISelectedColorButton.m */,
+				4A466CCD208A05E9008F5374 /* CustomAlertView */,
 				4A80604020849AC200214A76 /* UIColor+Hex.h */,
 				4A80604120849AC300214A76 /* UIColor+Hex.m */,
 				4A805FCC2084776F00214A76 /* AppDelegate.h */,
@@ -154,12 +168,6 @@
 				4A805FD72084776F00214A76 /* LaunchScreen.storyboard */,
 				4A805FDA2084776F00214A76 /* Info.plist */,
 				4A805FDB2084776F00214A76 /* main.m */,
-				4A80603D2084985B00214A76 /* SHIAlertView.h */,
-				4A80603E2084985B00214A76 /* SHIAlertView.m */,
-				4A8060462084A3C400214A76 /* NSString+TextHeight.h */,
-				4A8060472084A3C400214A76 /* NSString+TextHeight.m */,
-				4A466CC32089CA7A008F5374 /* SHIAlertAction.h */,
-				4A466CC42089CA7A008F5374 /* SHIAlertAction.m */,
 				4A466CC62089D178008F5374 /* SHIAlertPresentationController.h */,
 				4A466CC72089D178008F5374 /* SHIAlertPresentationController.m */,
 				4A466CC92089D988008F5374 /* SHIPresentBottomVC.h */,

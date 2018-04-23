@@ -35,6 +35,7 @@
     
 //    SHIPresentBottomVC *vc = [[SHIPresentBottomVC alloc] init];
 //      vc.modalPresentationStyle = UIModalPresentationCustom ;
+//    vc.transitioningDelegate = vc;
 //    [self presentViewController:vc animated:YES completion:^{
 //        
 //    }];

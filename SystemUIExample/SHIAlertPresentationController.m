@@ -49,7 +49,7 @@
     // the bottom edge of the screen.
     CGRect presentedViewControllerFrame = containerViewBounds;
     presentedViewControllerFrame.size.height = presentedViewContentSize.height;
-    presentedViewControllerFrame.origin.y = CGRectGetMaxY(containerViewBounds) - presentedViewContentSize.height -  100;
+    presentedViewControllerFrame.origin.y = CGRectGetMaxY(containerViewBounds) - presentedViewContentSize.height;
     return presentedViewControllerFrame;
 }
 

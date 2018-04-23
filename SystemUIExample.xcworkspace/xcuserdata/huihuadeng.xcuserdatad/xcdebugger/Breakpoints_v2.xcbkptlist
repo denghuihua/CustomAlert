@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SystemUIExample/SHIAlertView.m"
-            timestampString = "545913087.244794"
+            timestampString = "545914875.8650661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SystemUIExample/SHIAlertAction.h"
-            timestampString = "545913087.245512"
+            timestampString = "545914875.865464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,7 +42,7 @@
                   moduleName = "SystemUIExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huihuadeng/CustomAlert/SystemUIExample/SHIAlertAction.h"
-                  timestampString = "545913087.33743"
+                  timestampString = "545914876.016288"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -57,7 +57,7 @@
                   moduleName = "SystemUIExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huihuadeng/CustomAlert/SystemUIExample/SHIAlertAction.h"
-                  timestampString = "545913087.340086"
+                  timestampString = "545914876.019938"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -70,31 +70,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SystemUIExample/SHIAlertPresentationController.m"
-            timestampString = "545913087.245705"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-sizeForChildContentContainer:withParentContainerSize:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SystemUIExample/SHIPresentBottomVC.m"
-            timestampString = "545913087.245887"
+            timestampString = "545917013.984882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-animateTransition:"
             landmarkType = "7">
          </BreakpointContent>
@@ -102,17 +86,97 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SystemUIExample/SHIPresentBottomVC.m"
+            timestampString = "545917013.9851969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-transitionDuration:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SystemUIExample/SHIAlertPresentationController.m"
+            timestampString = "545917013.985273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-frameOfPresentedViewInContainerView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SystemUIExample/SHIAlertPresentationController.m"
+            timestampString = "545917013.985514"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-frameOfPresentedViewInContainerView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SystemUIExample/SHIPresentBottomVC.m"
-            timestampString = "545913087.246109"
+            timestampString = "545917013.9855731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-transitionDuration:"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-animateTransition:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SHIPresentBottomVC animateTransition:]"
+                  moduleName = "SystemUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huihuadeng/CustomAlert/SystemUIExample/SHIPresentBottomVC.m"
+                  timestampString = "545914876.054852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "880">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[SHIPresentBottomVC animateTransition:]_block_invoke"
+                  moduleName = "SystemUIExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huihuadeng/CustomAlert/SystemUIExample/SHIPresentBottomVC.m"
+                  timestampString = "545914876.056972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
